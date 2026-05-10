@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="tripzy_background">#F7F1F4</color>
+    <color name="tripzy_card">#FFFFFF</color>
+    <color name="tripzy_text">#202020</color>
+    <color name="tripzy_text_secondary">#6F6F6F</color>
+    <color name="tripzy_border">#E6E0E4</color>
+    <color name="tripzy_chip">#F3F0F2</color>
+    <color name="tripzy_primary">#D81B60</color>
+    <color name="tripzy_overlay">#99000000</color>
 </resources>
