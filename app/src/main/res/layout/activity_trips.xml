@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tripzy_background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="90dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- HEADER -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!-- Title and subtitle -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="My trips"
+                        android:textSize="34sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/tripzy_text"
+                        android:fontFamily="@font/new_spirit_condensed" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Your upcoming and past journeys"
+                        android:textSize="16sp"
+                        android:textColor="@color/tripzy_text_secondary"
+                        android:fontFamily="@font/helvetica_neue_light" />
+                </LinearLayout>
+
+                <!-- Profile avatar -->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/profileButton"
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:src="@drawable/user_icon"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/CircleImage" />
+            </LinearLayout>
+
+            <!-- UPCOMING TRIPS SECTION -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="12dp"
+                android:text="Upcoming"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/tripzy_text"
+                android:fontFamily="@font/new_spirit_condensed" />
+
+            <!-- Trip Card 1: Graz -->
+            <LinearLayout
+                style="@style/TripzySavedCard">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    style="@style/TripzySavedImage"
+                    android:src="@drawable/graz2"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/RoundedImage" />
+
+                <TextView
+                    style="@style/TripzySavedTitle"
+                    android:text="Graz" />
+
+                <TextView
+                    style="@style/TripzySavedSubtitle"
+                    android:text="15–17 May · Bus · from €12" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Booked"
+                    android:textSize="13sp"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/bg_primary_button"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:fontFamily="@font/helvetica_neue_light" />
+            </LinearLayout>
+
+            <!-- Trip Card 2: Lake Como -->
+            <LinearLayout
+                style="@style/TripzySavedCard">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    style="@style/TripzySavedImage"
+                    android:src="@drawable/lake_como"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/RoundedImage" />
+
+                <TextView
+                    style="@style/TripzySavedTitle"
+                    android:text="Lake Como" />
+
+                <TextView
+                    style="@style/TripzySavedSubtitle"
+                    android:text="22–26 June · Flight · from €189" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Planned"
+                    android:textSize="13sp"
+                    android:textColor="@color/tripzy_text"
+                    android:background="@drawable/bg_chip"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:fontFamily="@font/helvetica_neue_light" />
+            </LinearLayout>
+
+            <!-- PAST TRIPS SECTION -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="12dp"
+                android:text="Past trips"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/tripzy_text"
+                android:fontFamily="@font/new_spirit_condensed" />
+
+            <!-- Trip Card 3: Prague -->
+            <LinearLayout
+                style="@style/TripzySavedCard">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    style="@style/TripzySavedImage"
+                    android:src="@drawable/prague"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/RoundedImage" />
+
+                <TextView
+                    style="@style/TripzySavedTitle"
+                    android:text="Prague" />
+
+                <TextView
+                    style="@style/TripzySavedSubtitle"
+                    android:text="Train journey · April 2026" />
+            </LinearLayout>
+
+            <!-- Trip Card 4: Salzburg -->
+            <LinearLayout
+                style="@style/TripzySavedCard">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    style="@style/TripzySavedImage"
+                    android:src="@drawable/salzburg"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/RoundedImage" />
+
+                <TextView
+                    style="@style/TripzySavedTitle"
+                    android:text="Salzburg" />
+
+                <TextView
+                    style="@style/TripzySavedSubtitle"
+                    android:text="Train journey · March 2026" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- BOTTOM NAVIGATION -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:layout_gravity="bottom"
+        android:background="@color/tripzy_card"
+        android:elevation="8dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/exploreNav"
+            style="@style/TripzyNavItem"
+            android:text="⌕\nExplore" />
+
+        <TextView
+            android:id="@+id/savedNav"
+            style="@style/TripzyNavItem"
+            android:text="♡\nSaved" />
+
+        <TextView
+            android:id="@+id/tripsNav"
+            style="@style/TripzyNavItem"
+            android:text="✈\nTrips"
+            android:textColor="@color/tripzy_text" />
+
+    </LinearLayout>
+
+</FrameLayout>

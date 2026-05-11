@@ -22,7 +22,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/graz"
+                    android:src="@drawable/graz2"
                     android:scaleType="centerCrop" />
 
                 <TextView

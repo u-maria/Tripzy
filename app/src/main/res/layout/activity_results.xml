@@ -267,22 +267,55 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
+                    <!-- Schlossberg Walk -->
                     <LinearLayout style="@style/TripzyTripCard">
-                        <TextView style="@style/TripzyImagePlaceholder" android:text="🏰" />
-                        <TextView style="@style/TripzyCardTitle" android:text="Schlossberg walk" />
-                        <TextView style="@style/TripzyCardSubtitle" android:text="Landmark · 2 hours · free" />
+
+                        <ImageView
+                            style="@style/TripzyImagePlaceholder"
+                            android:src="@drawable/graz_schlossberg"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            style="@style/TripzyCardTitle"
+                            android:text="Schlossberg walk" />
+
+                        <TextView
+                            style="@style/TripzyCardSubtitle"
+                            android:text="Landmark · 2 hours · free" />
                     </LinearLayout>
 
+                    <!-- Kunsthaus Graz -->
                     <LinearLayout style="@style/TripzyTripCard">
-                        <TextView style="@style/TripzyImagePlaceholder" android:text="🎨" />
-                        <TextView style="@style/TripzyCardTitle" android:text="Kunsthaus Graz" />
-                        <TextView style="@style/TripzyCardSubtitle" android:text="Museum · from €12" />
+
+                        <ImageView
+                            style="@style/TripzyImagePlaceholder"
+                            android:src="@drawable/graz_kunsthaus"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            style="@style/TripzyCardTitle"
+                            android:text="Kunsthaus Graz" />
+
+                        <TextView
+                            style="@style/TripzyCardSubtitle"
+                            android:text="Museum · from €12" />
                     </LinearLayout>
 
+                    <!-- Mur Riverside Cafés -->
                     <LinearLayout style="@style/TripzyTripCard">
-                        <TextView style="@style/TripzyImagePlaceholder" android:text="☕" />
-                        <TextView style="@style/TripzyCardTitle" android:text="Mur riverside cafés" />
-                        <TextView style="@style/TripzyCardSubtitle" android:text="Food &amp; drinks · local favorite" />
+
+                        <ImageView
+                            style="@style/TripzyImagePlaceholder"
+                            android:src="@drawable/graz_mur_cafe"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            style="@style/TripzyCardTitle"
+                            android:text="Mur riverside cafés" />
+
+                        <TextView
+                            style="@style/TripzyCardSubtitle"
+                            android:text="Food &amp; drinks · local favorite" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -302,15 +335,18 @@
         android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/exploreNav"
             style="@style/TripzyNavItem"
             android:text="⌕\nExplore"
             android:textColor="@color/tripzy_text" />
 
         <TextView
+            android:id="@+id/savedNav"
             style="@style/TripzyNavItem"
             android:text="♡\nSaved" />
 
         <TextView
+            android:id="@+id/tripsNav"
             style="@style/TripzyNavItem"
             android:text="✈\nTrips" />
 

@@ -9,6 +9,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import android.content.Intent;
 import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     @Override
@@ -32,6 +33,12 @@ public class MainActivity extends AppCompatActivity {
 
         searchButton.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, ResultsActivity.class);
+            startActivity(intent);
+        });
+
+        TextView tripsNav = findViewById(R.id.tripsNav);
+        tripsNav.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, TripsActivity.class);
             startActivity(intent);
         });
     }
