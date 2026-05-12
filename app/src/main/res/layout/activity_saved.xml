@@ -147,16 +147,22 @@
 
         <TextView
             style="@style/TripzyNavItem"
-            android:text="⌕\nExplore" />
+            android:text="⌕\nExplore"
+            android:id="@+id/exploreNav"
+            />
 
         <TextView
             style="@style/TripzyNavItem"
             android:text="♡\nSaved"
-            android:textColor="@color/tripzy_text" />
+            android:textColor="@color/tripzy_text"
+            android:id="@+id/savedNav"
+            />
 
         <TextView
             style="@style/TripzyNavItem"
-            android:text="✈\nTrips" />
+            android:text="✈\nTrips"
+            android:id="@+id/tripsNav"
+            />
 
     </LinearLayout>
 

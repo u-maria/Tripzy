@@ -4,16 +4,13 @@ plugins {
 
 android {
     namespace = "at.ac.univie.hci.tripzy"
-    compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
-    }
+    compileSdk =36 // changed because of compatibility issue
 
     defaultConfig {
         applicationId = "at.ac.univie.hci.tripzy"
-        minSdk = 36
-        targetSdk = 36
+        minSdk = 26 //changed from 36->26 because 36 is really restrictive version,
+        // but 26 is needed for adaptive icons
+        targetSdk = 35   // changed because of  compatibility issues
         versionCode = 1
         versionName = "1.0"
 

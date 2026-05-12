@@ -29,13 +29,49 @@ public class ResultsActivity extends AppCompatActivity {
         View trainRouteCard = findViewById(R.id.trainRouteCard);
         View busRouteCard = findViewById(R.id.busRouteCard);
 
+
+        //basically the next two methods bring us to the same screen
         trainRouteCard.setOnClickListener(v -> {
+            // this is just a simple database simulation for the prototype
+            AppData.selectedTrip = MockData.grazTrip;
+            if (AppData.selectedTrip == null) {
+                AppData.errorMessage = "No trip selected.";
+                return;
+            }
             Intent intent = new Intent(ResultsActivity.this, CityDetailActivity.class);
             startActivity(intent);
         });
 
         busRouteCard.setOnClickListener(v -> {
+            // this is just a simple database simulation for the prototype
+            AppData.selectedTrip = MockData.grazTrip;
+
+            if (AppData.selectedTrip == null) {
+                AppData.errorMessage = "No trip selected.";
+                return;
+            }
             Intent intent = new Intent(ResultsActivity.this, CityDetailActivity.class);
+            startActivity(intent);
+        });
+
+
+        //those three buttons appear often throught the files and mostly present at the bottom
+        //of each screen for the quick switching up between them
+        View exploreNav = findViewById(R.id.exploreNav);
+        exploreNav.setOnClickListener(v -> {
+            Intent intent = new Intent(ResultsActivity.this, MainActivity.class);
+            startActivity(intent);
+        });
+
+        View savedNav = findViewById(R.id.savedNav);
+        savedNav.setOnClickListener(v -> {
+            Intent intent = new Intent(ResultsActivity.this, SavedActivity.class);
+            startActivity(intent);
+        });
+
+        View tripsNav = findViewById(R.id.tripsNav);
+        tripsNav.setOnClickListener(v -> {
+            Intent intent = new Intent(ResultsActivity.this, TripsActivity.class);
             startActivity(intent);
         });
     }

@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import android.widget.TextView;
 
 public class CityDetailActivity extends AppCompatActivity {
     @Override
@@ -23,6 +24,17 @@ public class CityDetailActivity extends AppCompatActivity {
         });
 
         View backButton = findViewById(R.id.detailBackButton);
+
+
+        TextView cityName = findViewById(R.id.detailCityName);
+        TextView tripInfo = findViewById(R.id.detailTripInfo);
+        // That os a pretend check if selected data exists. appears throught other project files
+        //but does not bring any real functionality(just for reference)
+        if (AppData.selectedTrip != null) {
+            cityName.setText(AppData.selectedTrip.city);
+            tripInfo.setText(AppData.selectedTrip.date + " - 1 guest - from Vienna");
+        }
+
         backButton.setOnClickListener(v -> finish());
     }
 }

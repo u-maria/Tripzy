@@ -80,15 +80,17 @@
                 android:elevation="8dp">
 
                 <TextView
+                    android:id="@+id/detailCityName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/new_spirit_condensed"
                     android:text="Graz"
-                    android:textSize="36sp"
-                    android:textStyle="bold"
                     android:textColor="@color/tripzy_text"
-                    android:fontFamily="@font/new_spirit_condensed" />
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/detailTripInfo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="15–17 May · 1 guest · from Vienna"
