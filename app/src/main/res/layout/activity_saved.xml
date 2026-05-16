@@ -154,7 +154,7 @@
         <TextView
             style="@style/TripzyNavItem"
             android:text="♡\nSaved"
-            android:textColor="@color/tripzy_text"
+            android:textColor="@color/tripzy_primary"
             android:id="@+id/savedNav"
             />
 

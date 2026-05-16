@@ -215,7 +215,7 @@
             android:id="@+id/tripsNav"
             style="@style/TripzyNavItem"
             android:text="✈\nTrips"
-            android:textColor="@color/tripzy_text" />
+            android:textColor="@color/tripzy_primary" />
 
     </LinearLayout>
 

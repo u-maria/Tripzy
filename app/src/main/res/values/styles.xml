@@ -107,7 +107,7 @@
 
     <style name="TripzyCalendarDay">
         <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">58dp</item>
+        <item name="android:layout_height">36dp</item>
         <item name="android:layout_columnWeight">1</item>
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/tripzy_text</item>
@@ -118,7 +118,7 @@
     <!--THE BEST PRICES IN THE CALENDAR-->
     <style name="TripzyCalendarDayBest">
         <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">64dp</item>
+        <item name="android:layout_height">36dp</item>
         <item name="android:layout_columnWeight">1</item>
         <item name="android:gravity">center</item>
         <item name="android:textColor">@android:color/white</item>
@@ -130,7 +130,7 @@
 
     <style name="TripzyCalendarDayMuted">
         <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">58dp</item>
+        <item name="android:layout_height">36dp</item>
         <item name="android:layout_columnWeight">1</item>
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/tripzy_text_secondary</item>

@@ -338,7 +338,7 @@
             android:id="@+id/exploreNav"
             style="@style/TripzyNavItem"
             android:text="⌕\nExplore"
-            android:textColor="@color/tripzy_text" />
+            android:textColor="@color/tripzy_primary" />
 
         <TextView
             android:id="@+id/savedNav"

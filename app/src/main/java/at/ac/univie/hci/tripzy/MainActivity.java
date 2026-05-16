@@ -10,6 +10,7 @@ import androidx.core.view.WindowInsetsCompat;
 import android.content.Intent;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
     @Override
@@ -30,7 +31,15 @@ public class MainActivity extends AppCompatActivity {
         });
 
         View searchButton = findViewById(R.id.searchButton);
+        EditText destinationInput = findViewById(R.id.destinationInput);
         View searchBar = findViewById(R.id.searchBar);
+
+        // fixing trip days flexibility
+        TextView datesTab = findViewById(R.id.datesTab);
+        TextView flexibleDatesTab = findViewById(R.id.flexibleDatesTab);
+
+        View calendarGrid = findViewById(R.id.calendarGrid);
+        TextView flexibleDateText = findViewById(R.id.flexibleDateText);
 
 
         //to fix the problem with the broken search button
@@ -53,6 +62,39 @@ public class MainActivity extends AppCompatActivity {
         overlayBackdrop.setOnClickListener(v -> {
             searchOverlay.setVisibility(View.GONE);
             overlayBackdrop.setVisibility(View.GONE);
+        });
+
+        // flexible dates visibility
+        datesTab.setOnClickListener(v -> {
+            calendarGrid.setVisibility(View.VISIBLE);
+            flexibleDateText.setVisibility(View.GONE);
+
+            datesTab.setBackgroundResource(R.drawable.bg_card);
+            datesTab.setTextColor(getResources().getColor(R.color.tripzy_text));
+
+            flexibleDatesTab.setBackgroundColor(
+                    getResources().getColor(android.R.color.transparent)
+            );
+            flexibleDatesTab.setTextColor(
+                    getResources().getColor(R.color.tripzy_text_secondary)
+            );
+        });
+
+        flexibleDatesTab.setOnClickListener(v -> {
+            calendarGrid.setVisibility(View.GONE);
+            flexibleDateText.setVisibility(View.VISIBLE);
+
+            flexibleDatesTab.setBackgroundResource(R.drawable.bg_card);
+            flexibleDatesTab.setTextColor(
+                    getResources().getColor(R.color.tripzy_text)
+            );
+
+            datesTab.setBackgroundColor(
+                    getResources().getColor(android.R.color.transparent)
+            );
+            datesTab.setTextColor(
+                    getResources().getColor(R.color.tripzy_text_secondary)
+            );
         });
 
         searchButton.setOnClickListener(v -> {

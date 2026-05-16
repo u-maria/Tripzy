@@ -1,5 +1,7 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="@color/tripzy_card"/>
-    <stroke android:width="1dp" android:color="@color/tripzy_border"/>
-    <corners android:radius="18dp"/>
+    <corners android:radius="28dp" />
+    <solid android:color="@color/tripzy_lime_soft" />
+    <stroke
+        android:width="1dp"
+        android:color="@color/tripzy_lime" />
 </shape>

@@ -149,11 +149,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="Train and bus"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
+                    android:fontFamily="@font/new_spirit_condensed"
+                    android:text="Train, Bus"
                     android:textColor="@color/tripzy_text"
-                    android:fontFamily="@font/new_spirit_condensed" />
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
                 <!-- Divider -->
                 <View
