@@ -104,6 +104,19 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, ResultsActivity.class);
             startActivity(intent);
         });
+// surprise button always leads to Graz
+        View surpriseButton = findViewById(R.id.surpriseButton);
+        surpriseButton.setOnClickListener(v -> {
+            AppData.selectedTrip = MockData.grazTrip;
+            Intent intent = new Intent(MainActivity.this, CityDetailActivity.class);
+            startActivity(intent);
+        });
+        // profile button leads to max mustermann
+        View profileButton = findViewById(R.id.profileButton_main);
+        profileButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+            startActivity(intent);
+        });
 
         TextView tripsNav = findViewById(R.id.tripsNav);
         TextView savedNav = findViewById(R.id.savedNav);
