@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tripzy_background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- HERO IMAGE AREA -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="310dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/graz2"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/detailBackButton"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="42dp"
+                    android:gravity="center"
+                    android:text="‹"
+                    android:textSize="40sp"
+                    android:textColor="@color/tripzy_text"
+                    android:background="@drawable/bg_card"
+                    android:elevation="6dp"
+                    android:fontFamily="@font/new_spirit_condensed" />
+
+                <TextView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="42dp"
+                    android:gravity="center"
+                    android:text="♡"
+                    android:textSize="30sp"
+                    android:textColor="@color/tripzy_text"
+                    android:background="@drawable/bg_card"
+                    android:elevation="6dp"
+                    android:fontFamily="@font/helvetica_neue_light" />
+
+                <TextView
+                    android:layout_width="96dp"
+                    android:layout_height="44dp"
+                    android:layout_gravity="end|bottom"
+                    android:layout_marginEnd="22dp"
+                    android:layout_marginBottom="48dp"
+                    android:gravity="center"
+                    android:text="Route"
+                    android:textSize="15sp"
+                    android:textColor="@color/tripzy_text"
+                    android:background="@drawable/bg_card"
+                    android:elevation="6dp"
+                    android:fontFamily="@font/helvetica_neue_light" />
+
+            </FrameLayout>
+
+            <!-- CONTENT OVERLAY CARD -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-34dp"
+                android:orientation="vertical"
+                android:padding="22dp"
+                android:background="@drawable/bg_card"
+                android:elevation="8dp">
+
+                <TextView
+                    android:id="@+id/detailCityName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/new_spirit_condensed"
+                    android:text="Graz"
+                    android:textColor="@color/tripzy_text"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/detailTripInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15–17 May · 1 guest · from Vienna"
+                    android:textSize="16sp"
+                    android:textColor="@color/tripzy_text_secondary"
+                    android:fontFamily="@font/helvetica_neue_light"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choose how you want to get there"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/tripzy_text"
+                    android:fontFamily="@font/new_spirit_condensed"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- TRANSPORT SWITCH -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Bus\nfrom €12"
+                        android:textSize="14sp"
+                        android:background="@drawable/bg_transport_selected"
+                        android:textColor="#E91E63"
+                        android:fontFamily="@font/helvetica_neue_light" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:gravity="center"
+                        android:text="Train\nfrom €19"
+                        android:textSize="14sp"
+                        android:textColor="@color/tripzy_text"
+                        android:background="@drawable/bg_transport_unselected"                        android:fontFamily="@font/helvetica_neue_light" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:gravity="center"
+                        android:text="Flight\nfrom €49"
+                        android:textSize="14sp"
+                        android:textColor="@color/tripzy_text"
+                        android:background="@drawable/bg_transport_unselected"                        android:fontFamily="@font/helvetica_neue_light" />
+
+                </LinearLayout>
+
+                <!-- SELECTED ROUTE CARD -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_chip">
+
+                    <TextView
+                        android:layout_width="46dp"
+                        android:layout_height="46dp"
+                        android:gravity="center"
+                        android:text="🚌"
+                        android:textSize="28sp"
+                        android:background="@drawable/bg_card" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="14dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Vienna → Graz"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/tripzy_text"
+                            android:fontFamily="@font/helvetica_neue_light" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bus · 3h 10m · Budget-friendly"
+                            android:textSize="14sp"
+                            android:textColor="@color/tripzy_text_secondary"
+                            android:fontFamily="@font/helvetica_neue_light"
+                            android:layout_marginTop="3dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="from €12"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/tripzy_text"
+                        android:fontFamily="@font/helvetica_neue_light" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_chip">
+
+                    <TextView
+                        android:layout_width="46dp"
+                        android:layout_height="46dp"
+                        android:gravity="center"
+                        android:text="✈️"
+                        android:textSize="26sp"
+                        android:background="@drawable/bg_card" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="14dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Vienna → Graz"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/tripzy_text"
+                            android:fontFamily="@font/helvetica_neue_light" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Flight · 45 min · Fastest option"
+                            android:textSize="14sp"
+                            android:textColor="@color/tripzy_text_secondary"
+                            android:fontFamily="@font/helvetica_neue_light"
+                            android:layout_marginTop="3dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="from €49"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/tripzy_text"
+                        android:fontFamily="@font/helvetica_neue_light" />
+
+                </LinearLayout>
+
+                <!-- CALENDAR TITLE -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="May prices"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/tripzy_text"
+                        android:fontFamily="@font/new_spirit_condensed" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        android:text="Expand"
+                        android:textSize="14sp"
+                        android:textColor="@color/tripzy_text"
+                        android:background="@drawable/bg_chip"
+                        android:fontFamily="@font/helvetica_neue_light" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cheapest travel days are highlighted."
+                    android:textSize="14sp"
+                    android:textColor="@color/tripzy_text_secondary"
+                    android:fontFamily="@font/helvetica_neue_light"
+                    android:layout_marginBottom="14dp" />
+
+                <!-- WEEK DAYS -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:orientation="horizontal">
+
+                    <TextView style="@style/TripzyCalendarWeekday" android:text="M" />
+                    <TextView style="@style/TripzyCalendarWeekday" android:text="T" />
+                    <TextView style="@style/TripzyCalendarWeekday" android:text="W" />
+                    <TextView style="@style/TripzyCalendarWeekday" android:text="T" />
+                    <TextView style="@style/TripzyCalendarWeekday" android:text="F" />
+                    <TextView style="@style/TripzyCalendarWeekday" android:text="S" />
+                    <TextView style="@style/TripzyCalendarWeekday" android:text="S" />
+                </LinearLayout>
+
+                <!-- CALENDAR GRID STATIC PROTOTYPE -->
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="7"
+                    android:rowCount="5">
+
+                    <TextView style="@style/TripzyCalendarDayMuted" android:text="" />
+                    <TextView style="@style/TripzyCalendarDayMuted" android:text="" />
+                    <TextView style="@style/TripzyCalendarDayMuted" android:text="" />
+                    <TextView style="@style/TripzyCalendarDay" android:text="1\n€18" />
+                    <TextView style="@style/TripzyCalendarDay" android:text="2\n€16" />
+                    <TextView style="@style/TripzyCalendarDay" android:text="3\n€20" />
+                    <TextView style="@style/TripzyCalendarDay" android:text="4\n€15" />
+
+                    <TextView style="@style/TripzyCalendarDay" android:text="5\n€14" />
+                    <TextView style="@style/TripzyCalendarDayBest" android:text="6\n€12" />
+                    <TextView style="@style/TripzyCalendarDay" android:text="7\n€17" />
+                    <TextView style="@style/TripzyCalendarDay" android:text="8\n€18" />
+                    <TextView style="@style/TripzyCalendarDayBest" android:text="9\n€12" />
+                    <TextView style="@style/TripzyCalendarDay" android:text="10\n€19" />
+                    <TextView style="@style/TripzyCalendarDay" android:text="11\n€16" />
+
+                    <TextView style="@style/TripzyCalendarDay" android:text="12\n€15" />
+                    <TextView style="@style/TripzyCalendarDay" android:text="13\n€18" />
+                    <TextView style="@style/TripzyCalendarDay" android:text="14\n€21" />
+                    <TextView style="@style/TripzyCalendarDayBest" android:text="15\n€12" />
+                    <TextView style="@style/TripzyCalendarDay" android:text="16\n€14" />
+                    <TextView style="@style/TripzyCalendarDay" android:text="17\n€17" />
+                    <TextView style="@style/TripzyCalendarDay" android:text="18\n€19" />
+
+                    <TextView style="@style/TripzyCalendarDay" android:text="19\n€16" />
+                    <TextView style="@style/TripzyCalendarDay" android:text="20\n€15" />
+                    <TextView style="@style/TripzyCalendarDay" android:text="21\n€18" />
+                    <TextView style="@style/TripzyCalendarDay" android:text="22\n€20" />
+                    <TextView style="@style/TripzyCalendarDayBest" android:text="23\n€12" />
+                    <TextView style="@style/TripzyCalendarDay" android:text="24\n€17" />
+                    <TextView style="@style/TripzyCalendarDay" android:text="25\n€16" />
+
+                    <TextView style="@style/TripzyCalendarDay" android:text="26\n€15" />
+                    <TextView style="@style/TripzyCalendarDay" android:text="27\n€14" />
+                    <TextView style="@style/TripzyCalendarDay" android:text="28\n€18" />
+                    <TextView style="@style/TripzyCalendarDay" android:text="29\n€19" />
+                    <TextView style="@style/TripzyCalendarDay" android:text="30\n€16" />
+                    <TextView style="@style/TripzyCalendarDay" android:text="31\n€15" />
+                    <TextView style="@style/TripzyCalendarDayMuted" android:text="" />
+
+                </GridLayout>
+
+                <!-- TIPS -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quick travel tips"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/tripzy_text"
+                    android:fontFamily="@font/new_spirit_condensed"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Book earlier for the lowest bus fares.\n• Mid-week trips are usually cheaper.\n• Graz is easy to explore without a car."
+                    android:textSize="15sp"
+                    android:textColor="@color/tripzy_text_secondary"
+                    android:fontFamily="@font/helvetica_neue_light"
+                    android:lineSpacingExtra="5dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

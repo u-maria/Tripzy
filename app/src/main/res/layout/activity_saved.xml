@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tripzy_background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="90dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Header -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Saved trips"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                android:textColor="@color/tripzy_text"
+                android:fontFamily="@font/new_spirit_condensed" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="24dp"
+                android:text="Your favourite destinations and travel ideas"
+                android:textSize="16sp"
+                android:textColor="@color/tripzy_text_secondary"
+                android:fontFamily="@font/helvetica_neue_light" />
+
+            <!-- Kitzbühel -->
+            <LinearLayout
+                style="@style/TripzySavedCard">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    style="@style/TripzySavedImage"
+                    android:src="@drawable/kitzbuhel"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/RoundedImage" />
+
+                <TextView
+                    style="@style/TripzySavedTitle"
+                    android:text="Kitzbühel" />
+
+                <TextView
+                    style="@style/TripzySavedSubtitle"
+                    android:text="Luxury alpine retreat" />
+            </LinearLayout>
+
+            <!-- Lake Como -->
+            <LinearLayout
+                style="@style/TripzySavedCard">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    style="@style/TripzySavedImage"
+                    android:src="@drawable/lake_como"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/RoundedImage" />
+
+                <TextView
+                    style="@style/TripzySavedTitle"
+                    android:text="Lake Como" />
+
+                <TextView
+                    style="@style/TripzySavedSubtitle"
+                    android:text="Premium summer escape" />
+            </LinearLayout>
+
+            <!-- Graz -->
+            <LinearLayout
+                style="@style/TripzySavedCard">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    style="@style/TripzySavedImage"
+                    android:src="@drawable/graz2"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/RoundedImage" />
+
+                <TextView
+                    style="@style/TripzySavedTitle"
+                    android:text="Graz" />
+
+                <TextView
+                    style="@style/TripzySavedSubtitle"
+                    android:text="Bus from Vienna · from €12" />
+            </LinearLayout>
+
+            <!-- Salzburg -->
+            <LinearLayout
+                style="@style/TripzySavedCard">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    style="@style/TripzySavedImage"
+                    android:src="@drawable/salzburg"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/RoundedImage" />
+
+                <TextView
+                    style="@style/TripzySavedTitle"
+                    android:text="Salzburg" />
+
+                <TextView
+                    style="@style/TripzySavedSubtitle"
+                    android:text="Train from Vienna · from €19" />
+            </LinearLayout>
+
+            <!-- Prague -->
+            <LinearLayout
+                style="@style/TripzySavedCard">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    style="@style/TripzySavedImage"
+                    android:src="@drawable/prague"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/RoundedImage" />
+
+                <TextView
+                    style="@style/TripzySavedTitle"
+                    android:text="Prague" />
+
+                <TextView
+                    style="@style/TripzySavedSubtitle"
+                    android:text="Weekend getaway · from €29" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:layout_gravity="bottom"
+        android:background="@color/tripzy_card"
+        android:elevation="8dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/TripzyNavItem"
+            android:text="⌕\nExplore"
+            android:id="@+id/exploreNav"
+            />
+
+        <TextView
+            style="@style/TripzyNavItem"
+            android:text="♡\nSaved"
+            android:textColor="@color/tripzy_primary"
+            android:id="@+id/savedNav"
+            />
+
+        <TextView
+            style="@style/TripzyNavItem"
+            android:text="✈\nTrips"
+            android:id="@+id/tripsNav"
+            />
+
+    </LinearLayout>
+
+</FrameLayout>

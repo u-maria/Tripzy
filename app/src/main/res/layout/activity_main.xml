@@ -1,19 +1,674 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/rootLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@color/tripzy_background">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="90dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="18dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hi, User"
+                        android:textColor="@color/tripzy_text"
+                        android:textSize="32sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/new_spirit_condensed" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="18dp"
+                        android:fontFamily="@font/helvetica_neue_light"
+                        android:text="Time to plan inspiring trips"
+                        android:textColor="@color/tripzy_text_secondary"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/user_icon"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="User profile picture"
+                    app:shapeAppearanceOverlay="@style/CircleImage"
+                    android:background="@drawable/bg_avatar" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:id="@+id/searchBar"
+                    android:layout_width="0dp"
+                    android:layout_height="64dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_search_bar"
+                    android:gravity="center_vertical"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="24dp"
+                    android:elevation="4dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="⌕"
+                        android:textSize="28sp"
+                        android:textColor="@color/tripzy_text"
+                        android:layout_marginEnd="12dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/helvetica_neue_light"
+                        android:text="Where to next?"
+                        android:textColor="@color/tripzy_text_secondary"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/surpriseButton"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginStart="12dp"
+                    android:background="@drawable/bg_search_bar"
+                    android:clickable="true"
+                    android:elevation="4dp"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="🎲"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView style="@style/TripzyChip" android:text="Weekend"
+                        android:fontFamily="@font/helvetica_neue_light"/>
+                    <TextView style="@style/TripzyChip" android:text="Culture"
+                        android:fontFamily="@font/helvetica_neue_light"/>
+                    <TextView style="@style/TripzyChip" android:text="Food"
+                        android:fontFamily="@font/helvetica_neue_light"/>
+                    <TextView style="@style/TripzyChip" android:text="Eco-friendly"
+                        android:fontFamily="@font/helvetica_neue_light"/>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Popular trips from Vienna"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/tripzy_text"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="14dp"
+                android:fontFamily="@font/new_spirit_condensed" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout style="@style/TripzyTripCard">
+                        <ImageView
+                            style="@style/TripzyImagePlaceholder"
+                            android:src="@drawable/prague"
+                            android:scaleType="centerCrop"
+                            android:clipToOutline="true" />
+                        <TextView style="@style/TripzyCardTitle" android:text="Prague weekend" />
+
+                        <TextView
+                            style="@style/TripzyCardSubtitle"
+                            android:fontFamily="@font/helvetica_neue_light"
+                            android:text="Train • from €29 • 4h 10m" />
+
+                        <TextView
+                            style="@style/TripzyEcoLabel"
+                            android:fontFamily="@font/helvetica_neue_light"
+                            android:text="Eco-friendly option" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/TripzyTripCard">
+                        <ImageView
+                            style="@style/TripzyImagePlaceholder"
+                            android:src="@drawable/budapest"
+                            android:scaleType="centerCrop"
+                            android:clipToOutline="true" />
+                        <TextView style="@style/TripzyCardTitle" android:text="Budapest by train" />
+
+                        <TextView
+                            style="@style/TripzyCardSubtitle"
+                            android:fontFamily="@font/helvetica_neue_light"
+                            android:text="Train • from €24 • 2h 40m" />
+
+                        <TextView
+                            style="@style/TripzyEcoLabel"
+                            android:fontFamily="@font/helvetica_neue_light"
+                            android:text="Low CO₂ route" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/TripzyTripCard">
+                        <ImageView
+                            style="@style/TripzyImagePlaceholder"
+                            android:src="@drawable/salzburg"
+                            android:scaleType="centerCrop"
+                            android:clipToOutline="true" />
+                        <TextView style="@style/TripzyCardTitle" android:text="Salzburg escape" />
+
+                        <TextView
+                            style="@style/TripzyCardSubtitle"
+                            android:fontFamily="@font/helvetica_neue_light"
+                            android:text="Train • from €19 • 2h 30m" />
+
+                        <TextView
+                            style="@style/TripzyEcoLabel"
+                            android:fontFamily="@font/helvetica_neue_light"
+                            android:text="No flight needed" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Smart deals for your next trip"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/tripzy_text"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="14dp"
+                android:fontFamily="@font/new_spirit_condensed" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="86dp"
+                    android:background="@drawable/bg_card"
+                    android:elevation="3dp"
+                    android:gravity="center_vertical"
+                    android:padding="16dp"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="46dp"
+                        android:layout_height="46dp"
+                        android:text="🚆"
+                        android:textSize="28sp"
+                        android:gravity="center"
+                        android:background="@drawable/bg_chip" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="14dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Vienna → Prague"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/tripzy_text"
+                            android:fontFamily="@font/helvetica_neue_light" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Train • 4h 10m • Low CO₂"
+                            android:textSize="13sp"
+                            android:textColor="@color/tripzy_text_secondary"
+                            android:layout_marginTop="3dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="from €29"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/tripzy_text"
+                        android:fontFamily="@font/helvetica_neue_light" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="86dp"
+                    android:background="@drawable/bg_card"
+                    android:elevation="3dp"
+                    android:gravity="center_vertical"
+                    android:padding="16dp"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="46dp"
+                        android:layout_height="46dp"
+                        android:text="🚌"
+                        android:textSize="28sp"
+                        android:gravity="center"
+                        android:background="@drawable/bg_chip" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="14dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Vienna → Budapest"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/tripzy_text"
+                            android:fontFamily="@font/helvetica_neue_light"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bus • 3h • Budget-friendly"
+                            android:textSize="13sp"
+                            android:textColor="@color/tripzy_text_secondary"
+                            android:layout_marginTop="3dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="from €18"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/tripzy_text"
+                        android:fontFamily="@font/helvetica_neue_light" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:layout_gravity="bottom"
+        android:background="@color/tripzy_card"
+        android:elevation="8dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/exploreNav"
+            style="@style/TripzyNavItem"
+            android:text="⌕\nExplore"
+            android:textColor="@color/tripzy_primary"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/savedNav"
+            style="@style/TripzyNavItem"
+            android:text="♡\nSaved"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tripsNav"
+            style="@style/TripzyNavItem"
+            android:text="✈\nTrips"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/overlayBackdrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/tripzy_overlay"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/searchOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="88dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="54dp"
+                android:background="@drawable/bg_card"
+                android:elevation="5dp"
+                android:gravity="center_vertical"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <EditText
+                    android:id="@+id/destinationInput"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:hint="Search destinations"
+                    android:text=""
+                    android:singleLine="true"
+                    android:textSize="16sp"
+                    android:textColor="@color/tripzy_text"
+                    android:textColorHint="@color/tripzy_text_secondary"
+                    android:fontFamily="@font/helvetica_neue_light" />
+
+                <TextView
+                    android:id="@+id/flexibleDestinationButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:text="I’m flexible"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/tripzy_text_secondary"
+                    android:background="@drawable/bg_flexible_unselected"
+                    android:fontFamily="@font/helvetica_neue_light"
+                    android:clickable="true"
+                    android:focusable="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/bg_card"
+                android:elevation="8dp"
+                android:orientation="vertical"
+                android:paddingStart="22dp"
+                android:paddingEnd="22dp"
+                android:paddingTop="22dp"
+                android:paddingBottom="34dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="When?"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/tripzy_text"
+                    android:fontFamily="@font/new_spirit_condensed" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_chip"
+                    android:orientation="horizontal"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:id="@+id/datesTab"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Dates"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:textColor="@color/tripzy_text"
+                        android:background="@drawable/bg_card"
+                        android:fontFamily="@font/helvetica_neue_light"
+                        android:clickable="true"
+                        android:focusable="true" />
+
+                    <TextView
+                        android:id="@+id/flexibleDatesTab"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Flexible"
+                        android:textSize="15sp"
+                        android:textColor="@color/tripzy_text_secondary"
+                        android:fontFamily="@font/helvetica_neue_light"
+                        android:clickable="true"
+                        android:focusable="true" />
+                </LinearLayout>
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:columnCount="7">
+
+                    <TextView style="@style/TripzyCalendarWeekday" android:text="M" />
+                    <TextView style="@style/TripzyCalendarWeekday" android:text="T" />
+                    <TextView style="@style/TripzyCalendarWeekday" android:text="W" />
+                    <TextView style="@style/TripzyCalendarWeekday" android:text="T" />
+                    <TextView style="@style/TripzyCalendarWeekday" android:text="F" />
+                    <TextView style="@style/TripzyCalendarWeekday" android:text="S" />
+                    <TextView style="@style/TripzyCalendarWeekday" android:text="S" />
+                </GridLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="May 2026"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/tripzy_text"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/helvetica_neue_light" />
+
+                <GridLayout
+                    android:id="@+id/calendarGrid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:columnCount="7">
+
+                    <TextView style="@style/TripzyCalendarDayMuted" android:text="" />
+                    <TextView style="@style/TripzyCalendarDayMuted" android:text="" />
+                    <TextView style="@style/TripzyCalendarDayMuted" android:text="" />
+                    <TextView style="@style/TripzyCalendarDayMuted" android:text="" />
+                    <TextView style="@style/TripzyCalendarDayMuted" android:text="1" />
+                    <TextView style="@style/TripzyCalendarDayMuted" android:text="2" />
+                    <TextView style="@style/TripzyCalendarDayMuted" android:text="3" />
+
+                    <TextView style="@style/TripzyCalendarDayMuted" android:text="4" />
+                    <TextView style="@style/TripzyCalendarDayMuted" android:text="5" />
+                    <TextView style="@style/TripzyCalendarDayMuted" android:text="6" />
+                    <TextView style="@style/TripzyCalendarDayMuted" android:text="7" />
+                    <TextView style="@style/TripzyCalendarDayMuted" android:text="8" />
+                    <TextView style="@style/TripzyCalendarDay" android:text="9" />
+                    <TextView style="@style/TripzyCalendarDay" android:text="10" />
+
+                    <TextView style="@style/TripzyCalendarDay" android:text="11" />
+                    <TextView style="@style/TripzyCalendarDay" android:text="12" />
+                    <TextView style="@style/TripzyCalendarDay" android:text="13" />
+                    <TextView style="@style/TripzyCalendarDay" android:text="14" />
+                    <TextView style="@style/TripzyCalendarDayBest" android:text="15" />
+                    <TextView style="@style/TripzyCalendarDayBest" android:text="16" />
+                    <TextView style="@style/TripzyCalendarDayBest" android:text="17" />
+
+                    <TextView style="@style/TripzyCalendarDay" android:text="18" />
+                    <TextView style="@style/TripzyCalendarDay" android:text="19" />
+                    <TextView style="@style/TripzyCalendarDay" android:text="20" />
+                    <TextView style="@style/TripzyCalendarDay" android:text="21" />
+                    <TextView style="@style/TripzyCalendarDay" android:text="22" />
+                    <TextView style="@style/TripzyCalendarDay" android:text="23" />
+                    <TextView style="@style/TripzyCalendarDay" android:text="24" />
+
+                    <TextView style="@style/TripzyCalendarDay" android:text="25" />
+                    <TextView style="@style/TripzyCalendarDay" android:text="26" />
+                    <TextView style="@style/TripzyCalendarDay" android:text="27" />
+                    <TextView style="@style/TripzyCalendarDay" android:text="28" />
+                    <TextView style="@style/TripzyCalendarDay" android:text="29" />
+                    <TextView style="@style/TripzyCalendarDay" android:text="30" />
+                    <TextView style="@style/TripzyCalendarDay" android:text="31" />
+                </GridLayout>
+
+                <TextView
+                    android:id="@+id/flexibleDateText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:gravity="center"
+                    android:text="I’m flexible with dates"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/tripzy_green"
+                    android:fontFamily="@font/helvetica_neue_light"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Who?"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/tripzy_text"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/helvetica_neue_light" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="Adults                                      −   1   +"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/tripzy_text"
+                    android:fontFamily="@font/helvetica_neue_light" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="Children                                   −   0   +"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/tripzy_text"
+                    android:fontFamily="@font/helvetica_neue_light" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="Pets                                         −   0   +"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/tripzy_text"
+                    android:fontFamily="@font/helvetica_neue_light" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/clearAllButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Clear all"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/tripzy_text"
+                    android:fontFamily="@font/helvetica_neue_light" />
+
+                <TextView
+                    android:id="@+id/searchButton"
+                    android:layout_width="170dp"
+                    android:layout_height="54dp"
+                    android:text="Search"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/bg_primary_button"
+                    android:fontFamily="@font/helvetica_neue_light" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/closeOverlay"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_gravity="top|end"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="18dp"
+            android:text="×"
+            android:textSize="28sp"
+            android:gravity="center"
+            android:textColor="@color/tripzy_text"
+            android:background="@drawable/bg_card"
+            android:elevation="20dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </FrameLayout>
+</FrameLayout>

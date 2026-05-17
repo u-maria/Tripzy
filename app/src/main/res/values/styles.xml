@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--BASIC CARD STYLES FOR MOST OF THE SCREENS-->
+    <style name="TripzyChip">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:paddingStart">18dp</item>
+        <item name="android:paddingEnd">18dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/bg_chip</item>
+        <item name="android:textColor">@color/tripzy_text</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/helvetica_neue_light</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="TripzyDateChip">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">76dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/bg_outline_chip</item>
+        <item name="android:textColor">@color/tripzy_text</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/helvetica_neue_light</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="TripzyTripCard">
+        <item name="android:layout_width">220dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@drawable/bg_card</item>
+        <item name="android:padding">14dp</item>
+        <item name="android:elevation">3dp</item>
+    </style>
+
+    <style name="TripzyImagePlaceholder">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">140dp</item>
+        <item name="android:layout_marginBottom">12dp</item>
+        <item name="android:background">@drawable/bg_image_placeholder</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:clipToOutline">true</item>
+    </style>
+
+    <style name="TripzyCardTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/tripzy_text</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:fontFamily">@font/helvetica_neue_light</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TripzyCardSubtitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/tripzy_text_secondary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:fontFamily">@font/helvetica_neue_light</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <!--"ECO-FRIENDLY" LABELS-->
+    <style name="TripzyEcoLabel">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/bg_chip</item>
+        <item name="android:textColor">@color/tripzy_text_secondary</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">@font/helvetica_neue_light</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="TripzyNavItem">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/tripzy_text_secondary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/helvetica_neue_light</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <!--CALENDAR VIEW-->
+    <style name="TripzyCalendarWeekday">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/tripzy_text_secondary</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">@font/helvetica_neue_light</item>
+    </style>
+
+    <style name="TripzyCalendarDay">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/tripzy_text</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/helvetica_neue_light</item>
+    </style>
+
+    <!--THE BEST PRICES IN THE CALENDAR-->
+    <style name="TripzyCalendarDayBest">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/bg_calendar_best</item>
+        <item name="android:fontFamily">@font/helvetica_neue_light</item>
+    </style>
+
+    <style name="TripzyCalendarDayMuted">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/tripzy_text_secondary</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/helvetica_neue_light</item>
+    </style>
+
+    <!--ROUND PROFILE PICTURE-->
+    <style name="CircleImage">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">24dp</item>
+    </style>
+
+    <!--"SAVED" SCREEN-->
+    <style name="TripzySavedCard">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@drawable/bg_card</item>
+        <item name="android:padding">14dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:elevation">3dp</item>
+    </style>
+
+    <style name="TripzySavedImage">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">180dp</item>
+        <item name="android:background">@drawable/bg_image_placeholder</item>
+    </style>
+
+    <style name="TripzySavedTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/tripzy_text</item>
+        <item name="android:fontFamily">@font/new_spirit_condensed</item>
+    </style>
+
+    <style name="TripzySavedSubtitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/tripzy_text_secondary</item>
+        <item name="android:fontFamily">@font/helvetica_neue_light</item>
+    </style>
+
+    <style name="RoundedImage">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">24dp</item>
+    </style>
+
+</resources>

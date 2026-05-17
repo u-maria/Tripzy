@@ -20,6 +20,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ResultsActivity" />
+        <activity android:name=".CityDetailActivity" />
+        <activity android:name=".SavedActivity" />
+        <activity android:name=".TripsActivity" />
+        <activity android:name=".ProfileActivity"/>
     </application>
 
 </manifest>
