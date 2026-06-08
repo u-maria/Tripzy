@@ -53,7 +53,14 @@ public class ResultsActivity extends AppCompatActivity {
             Intent intent = new Intent(ResultsActivity.this, CityDetailActivity.class);
             startActivity(intent);
         });
-
+// surprise button alaways leads to Graz
+        /*View surpriseButton = findViewById(R.id.surpriseButton);
+        surpriseButton.setOnClickListener(v -> {
+            AppData.selectedTrip = MockData.grazTrip;
+            Intent intent = new Intent(ResultsActivity.this, CityDetailActivity.class);
+            startActivity(intent);
+        });
+*/
 
         //those three buttons appear often throught the files and mostly present at the bottom
         //of each screen for the quick switching up between them
