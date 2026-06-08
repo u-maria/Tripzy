@@ -32,11 +32,11 @@
     <style name="TripzyTripCard">
         <item name="android:layout_width">220dp</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginEnd">20dp</item>
         <item name="android:orientation">vertical</item>
         <item name="android:background">@drawable/bg_card</item>
         <item name="android:padding">14dp</item>
-        <item name="android:elevation">3dp</item>
+        <item name="android:elevation">1dp</item>
     </style>
 
     <style name="TripzyImagePlaceholder">
@@ -71,16 +71,16 @@
     <!--"ECO-FRIENDLY" LABELS-->
     <style name="TripzyEcoLabel">
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">32dp</item>
-        <item name="android:layout_marginTop">10dp</item>
-        <item name="android:paddingStart">12dp</item>
-        <item name="android:paddingEnd">12dp</item>
-        <item name="android:gravity">center</item>
-        <item name="android:background">@drawable/bg_chip</item>
-        <item name="android:textColor">@color/tripzy_text_secondary</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:paddingStart">14dp</item>
+        <item name="android:paddingEnd">14dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
         <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/tripzy_eco_text</item>
+        <item name="android:background">@drawable/bg_eco_label</item>
         <item name="android:fontFamily">@font/helvetica_neue_light</item>
-        <item name="android:textStyle">normal</item>
     </style>
 
     <style name="TripzyNavItem">
@@ -168,7 +168,7 @@
         <item name="android:textSize">22sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/tripzy_text</item>
-        <item name="android:fontFamily">@font/new_spirit_condensed</item>
+        <item name="android:fontFamily">@font/helvetica_neue_light</item>
     </style>
 
     <style name="TripzySavedSubtitle">

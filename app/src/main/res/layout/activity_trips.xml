@@ -38,14 +38,14 @@
                         android:textSize="34sp"
                         android:textStyle="bold"
                         android:textColor="@color/tripzy_text"
-                        android:fontFamily="@font/new_spirit_condensed" />
+                        android:fontFamily="@font/helvetica_neue_light" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:text="Your upcoming and past journeys"
-                        android:textSize="16sp"
+                        android:textSize="18sp"
                         android:textColor="@color/tripzy_text_secondary"
                         android:fontFamily="@font/helvetica_neue_light" />
                 </LinearLayout>
@@ -64,13 +64,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginBottom="12dp"
-                android:text="Upcoming"
+                android:text="Current trips"
                 android:textSize="28sp"
                 android:textStyle="bold"
                 android:textColor="@color/tripzy_text"
-                android:fontFamily="@font/new_spirit_condensed" />
+                android:fontFamily="@font/helvetica_neue_light" />
 
             <!-- Trip Card 1: Graz -->
             <LinearLayout
@@ -94,7 +94,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="Booked"
+                    android:text="In Progress"
                     android:textSize="13sp"
                     android:textColor="@android:color/white"
                     android:background="@drawable/bg_primary_button"
@@ -148,7 +148,7 @@
                 android:textSize="28sp"
                 android:textStyle="bold"
                 android:textColor="@color/tripzy_text"
-                android:fontFamily="@font/new_spirit_condensed" />
+                android:fontFamily="@font/helvetica_neue_light" />
 
             <!-- Trip Card 3: Prague -->
             <LinearLayout
@@ -209,12 +209,12 @@
         <TextView
             android:id="@+id/savedNav"
             style="@style/TripzyNavItem"
-            android:text="♡\nSaved" />
+            android:text="♡\nWishlist" />
 
         <TextView
             android:id="@+id/tripsNav"
             style="@style/TripzyNavItem"
-            android:text="✈\nTrips"
+            android:text="✈\nMy Trips"
             android:textColor="@color/tripzy_primary" />
 
     </LinearLayout>

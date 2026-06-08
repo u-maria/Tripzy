@@ -100,7 +100,7 @@
                 android:textSize="26sp"
                 android:textStyle="bold"
                 android:textColor="@color/tripzy_text"
-                android:fontFamily="@font/new_spirit_condensed"
+                android:fontFamily="@font/helvetica_neue_light"
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="14dp" />
 
@@ -253,7 +253,7 @@
                 android:textSize="26sp"
                 android:textStyle="bold"
                 android:textColor="@color/tripzy_text"
-                android:fontFamily="@font/new_spirit_condensed"
+                android:fontFamily="@font/helvetica_neue_light"
                 android:layout_marginTop="18dp"
                 android:layout_marginBottom="14dp" />
 
@@ -343,12 +343,12 @@
         <TextView
             android:id="@+id/savedNav"
             style="@style/TripzyNavItem"
-            android:text="♡\nSaved" />
+            android:text="♡\nWishlist" />
 
         <TextView
             android:id="@+id/tripsNav"
             style="@style/TripzyNavItem"
-            android:text="✈\nTrips" />
+            android:text="✈\nMy Trips" />
 
     </LinearLayout>
 

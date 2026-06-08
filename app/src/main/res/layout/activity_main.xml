@@ -4,12 +4,14 @@
     android:id="@+id/rootLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
     android:background="@color/tripzy_background">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingBottom="90dp">
+        android:paddingBottom="36dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -33,11 +35,11 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Hi, User"
+                        android:text="Hi, Max"
                         android:textColor="@color/tripzy_text"
                         android:textSize="32sp"
                         android:textStyle="bold"
-                        android:fontFamily="@font/new_spirit_condensed" />
+                        android:fontFamily="@font/helvetica_neue_light" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -75,7 +77,7 @@
                     android:gravity="center_vertical"
                     android:paddingStart="24dp"
                     android:paddingEnd="24dp"
-                    android:elevation="4dp"
+                    android:elevation="1dp"
                     android:clickable="true"
                     android:focusable="true">
 
@@ -103,7 +105,7 @@
                     android:layout_marginStart="12dp"
                     android:background="@drawable/bg_search_bar"
                     android:clickable="true"
-                    android:elevation="4dp"
+                    android:elevation="1dp"
                     android:focusable="true"
                     android:gravity="center"
                     android:text="🎲"
@@ -137,22 +139,33 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Popular trips from Vienna"
-                android:textSize="24sp"
+                android:textSize="22sp"
                 android:textStyle="bold"
                 android:textColor="@color/tripzy_text"
                 android:layout_marginTop="28dp"
                 android:layout_marginBottom="14dp"
-                android:fontFamily="@font/new_spirit_condensed" />
+                android:fontFamily="@font/helvetica_neue_light" />
 
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="-20dp"
+                android:layout_marginEnd="-20dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:paddingStart="20dp"
+                android:paddingEnd="40dp"
+                android:paddingBottom="18dp"
                 android:scrollbars="none">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:paddingEnd="40dp"
+                    android:paddingBottom="18dp">
 
                     <LinearLayout style="@style/TripzyTripCard">
                         <ImageView
@@ -218,12 +231,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Smart deals for your next trip"
-                android:textSize="24sp"
+                android:textSize="22sp"
                 android:textStyle="bold"
                 android:textColor="@color/tripzy_text"
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="14dp"
-                android:fontFamily="@font/new_spirit_condensed" />
+                android:fontFamily="@font/helvetica_neue_light" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -234,7 +247,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="86dp"
                     android:background="@drawable/bg_card"
-                    android:elevation="3dp"
+                    android:elevation="2dp"
                     android:gravity="center_vertical"
                     android:padding="16dp"
                     android:layout_marginBottom="12dp">
@@ -286,7 +299,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="86dp"
                     android:background="@drawable/bg_card"
-                    android:elevation="3dp"
+                    android:elevation="2dp"
                     android:gravity="center_vertical"
                     android:padding="16dp"
                     android:layout_marginBottom="12dp">
@@ -342,12 +355,13 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="74dp"
+        android:layout_height="82dp"
         android:layout_gravity="bottom"
         android:background="@color/tripzy_card"
         android:elevation="8dp"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingBottom="18dp">
 
         <TextView
             android:id="@+id/exploreNav"
@@ -359,13 +373,13 @@
         <TextView
             android:id="@+id/savedNav"
             style="@style/TripzyNavItem"
-            android:text="♡\nSaved"
+            android:text="♡\nWishlist"
             android:textSize="16sp" />
 
         <TextView
             android:id="@+id/tripsNav"
             style="@style/TripzyNavItem"
-            android:text="✈\nTrips"
+            android:text="✈\nMy Trips"
             android:textSize="16sp" />
 
     </LinearLayout>

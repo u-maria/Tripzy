@@ -44,7 +44,7 @@
                     android:textSize="30sp"
                     android:textStyle="bold"
                     android:textColor="@color/tripzy_text"
-                    android:fontFamily="@font/new_spirit_condensed" />
+                    android:fontFamily="@font/helvetica_neue_light" />
 
                 <View
                     android:layout_width="48dp"
@@ -77,7 +77,7 @@
                     android:textSize="30sp"
                     android:textStyle="bold"
                     android:textColor="@color/tripzy_text"
-                    android:fontFamily="@font/new_spirit_condensed" />
+                    android:fontFamily="@font/helvetica_neue_light" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -99,7 +99,7 @@
                 android:textSize="26sp"
                 android:textStyle="bold"
                 android:textColor="@color/tripzy_text"
-                android:fontFamily="@font/new_spirit_condensed" />
+                android:fontFamily="@font/helvetica_neue_light" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -126,7 +126,7 @@
                     android:textSize="20sp"
                     android:textStyle="bold"
                     android:textColor="@color/tripzy_text"
-                    android:fontFamily="@font/new_spirit_condensed" />
+                    android:fontFamily="@font/helvetica_neue_light" />
 
                 <!-- Divider -->
                 <View
@@ -149,7 +149,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:fontFamily="@font/new_spirit_condensed"
+                    android:fontFamily="@font/helvetica_neue_light"
                     android:text="Train, Bus"
                     android:textColor="@color/tripzy_text"
                     android:textSize="20sp"
@@ -180,7 +180,7 @@
                     android:textSize="20sp"
                     android:textStyle="bold"
                     android:textColor="@color/tripzy_text"
-                    android:fontFamily="@font/new_spirit_condensed" />
+                    android:fontFamily="@font/helvetica_neue_light" />
 
                 <!-- Divider -->
                 <View
@@ -207,7 +207,7 @@
                     android:textSize="20sp"
                     android:textStyle="bold"
                     android:textColor="@color/tripzy_text"
-                    android:fontFamily="@font/new_spirit_condensed" />
+                    android:fontFamily="@font/helvetica_neue_light" />
             </LinearLayout>
 
             <!-- Settings preview -->
@@ -220,7 +220,7 @@
                 android:textSize="26sp"
                 android:textStyle="bold"
                 android:textColor="@color/tripzy_text"
-                android:fontFamily="@font/new_spirit_condensed" />
+                android:fontFamily="@font/helvetica_neue_light" />
 
             <LinearLayout
                 android:layout_width="match_parent"

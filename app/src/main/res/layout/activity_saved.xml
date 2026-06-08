@@ -21,18 +21,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="18dp"
-                android:text="Saved trips"
+                android:text="Wishlist"
                 android:textSize="34sp"
                 android:textStyle="bold"
                 android:textColor="@color/tripzy_text"
-                android:fontFamily="@font/new_spirit_condensed" />
+                android:fontFamily="@font/helvetica_neue_light" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="24dp"
-                android:text="Your favourite destinations and travel ideas"
+                android:text="Travel ideas you saved for later"
                 android:textSize="16sp"
                 android:textColor="@color/tripzy_text_secondary"
                 android:fontFamily="@font/helvetica_neue_light" />
@@ -153,14 +153,14 @@
 
         <TextView
             style="@style/TripzyNavItem"
-            android:text="♡\nSaved"
+            android:text="♡\nWishlist"
             android:textColor="@color/tripzy_primary"
             android:id="@+id/savedNav"
             />
 
         <TextView
             style="@style/TripzyNavItem"
-            android:text="✈\nTrips"
+            android:text="✈\nMy Trips"
             android:id="@+id/tripsNav"
             />
 
